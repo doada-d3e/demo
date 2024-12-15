@@ -123,3 +123,8 @@ where parkName = \"{parking_name}\" and
 group by terminalID
 ;
 ```
+
+6. Utworzenie indeksu
+```sql
+create index sla_agg_index on sla_agg(parkName, year, month, day);
+```
