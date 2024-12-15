@@ -1,0 +1,2 @@
+streamlit==1.41.0
+pysqlite3==0.5.4
