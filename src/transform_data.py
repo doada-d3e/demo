@@ -150,6 +150,10 @@ insert or replace into timeline values
     # populate 'sla_agg' table
     cursor.execute(sttm_populate_sla_agg)
 
+    cursor.execute("""
+create index sla_agg_index on sla_agg(parkName, year, month, day);
+""")
+
     connection.commit()
     connection.close()
 
