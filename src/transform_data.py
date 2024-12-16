@@ -107,7 +107,7 @@ select
     day,
     parkName,
     sum(unavailable_sec),
-    sum(open_sec)
+    min(open_sec)
 from sla
 group by parkName, terminalID, year, month, day
 ;
